@@ -10,6 +10,7 @@ const data = {
             brand: 'Nike',
             numReviews: 10,
             description: 'high quality shirt',
+            rating: 4
         },
         {
             name: 'Nike Shirt',
@@ -21,6 +22,7 @@ const data = {
             brand: 'Nike',
             numReviews: 10,
             description: 'high quality shirt',
+            rating: 7
         },
         {
             name: 'Nike Shirt',
@@ -32,6 +34,7 @@ const data = {
             brand: 'Nike',
             numReviews: 10,
             description: 'high quality shirt',
+            rating: 8
         },
         {
             name: 'Nike Shirt',
@@ -43,6 +46,7 @@ const data = {
             brand: 'Nike',
             numReviews: 10,
             description: 'high quality shirt',
+            rating: 1
         }
     ]
 }
