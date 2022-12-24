@@ -3,7 +3,10 @@ import { useEffect, useReducer } from "react";
 import { Badge, Button, Col, ListGroup, Row } from "react-bootstrap";
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom"
+import { LoadingBox } from "../components/LoadingBox";
+import { MessageBox } from "../components/MessageBox";
 import { Rating } from "../components/Rating";
+import { getError } from "../utils";
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -38,16 +41,15 @@ export const ProductScreen = () => {
                 dispatch({ type: 'FETCH_SUCCESS', payload: data });
 
             } catch (error) {
-                dispatch({ type: 'FETCH_FAIL', payload: error.message })
+                dispatch({ type: 'FETCH_FAIL', payload: getError(error) })
             }
             // setProducts(data);
         };
         fetchData();
     }, [slug])
     return (
-        loading ? <div>Loading ...</div>
-            : error ? <div>{error}</div>
-                :
+        loading ? (<LoadingBox />) :
+            error ? (<MessageBox variant="danger">{error}</MessageBox>) :
                 <div>
                     <Row>
                         <Col md={6}>
