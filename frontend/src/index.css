@@ -7,13 +7,39 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-header {
-  background-color: #1a237e;
+.site-container {
+  min-height: 100vh;
+}
+
+main {
   padding: 1rem;
 }
 
-header a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  border: 1px #202020 solid;
+  margin: 1rem;
+  justify-content: center;
+}
+
+.product img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.rating span {
+  color: #e65100;
+}
+
+.img-large {
+  max-width: 100%;
 }
