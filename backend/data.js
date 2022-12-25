@@ -1,6 +1,7 @@
 const data = {
     products: [
         {
+            _id: 1,
             name: 'Nike Shirt',
             slug: 'nike-slim-shirt',
             category: 'Shirts',
@@ -13,6 +14,7 @@ const data = {
             rating: 4
         },
         {
+            _id: 2,
             name: 'Nike Shirt',
             slug: 'nike-slim-shoes',
             category: 'Shirts',
@@ -25,6 +27,7 @@ const data = {
             rating: 7
         },
         {
+            _id: 3,
             name: 'Nike Shirt',
             slug: 'nike-slim-sweater',
             category: 'Shirts',
@@ -37,6 +40,7 @@ const data = {
             rating: 8
         },
         {
+            _id: 4,
             name: 'Nike Shirt',
             slug: 'nike-slim-soft',
             category: 'Shirts',
