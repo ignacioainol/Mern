@@ -2,7 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useReducer } from "react";
 import { Badge, Button, Col, ListGroup, Row } from "react-bootstrap";
 import { Helmet } from "react-helmet-async";
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { LoadingBox } from "../components/LoadingBox";
 import { MessageBox } from "../components/MessageBox";
 import { Rating } from "../components/Rating";
@@ -24,6 +24,7 @@ const reducer = (state, action) => {
 
 export const ProductScreen = () => {
     const { slug } = useParams();
+    const navigate = useNavigate();
 
     const [{ loading, error, product }, dispatch] = useReducer(reducer, {
         product: [],
@@ -59,7 +60,8 @@ export const ProductScreen = () => {
             window.alert('Sorry, Product is out of stock');
             return;
         }
-        ctxDispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } })
+        ctxDispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
+        navigate('/cart');
     }
 
     return (
