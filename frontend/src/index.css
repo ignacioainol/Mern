@@ -8,7 +8,15 @@ body {
 }
 
 .site-container {
+  position: relative;
   min-height: 100vh;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 1rem 0;
 }
 
 main {
@@ -46,4 +54,8 @@ main {
 
 .img-thumbnail {
   height: 80px;
+}
+
+.small-container {
+  max-width: 600px;
 }
