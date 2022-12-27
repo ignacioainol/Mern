@@ -1,7 +1,6 @@
 const data = {
     products: [
         {
-            _id: 1,
             name: 'Nike Shirt',
             slug: 'nike-slim-shirt',
             category: 'Shirts',
@@ -14,9 +13,8 @@ const data = {
             rating: 4
         },
         {
-            _id: 2,
-            name: 'Nike Shirt',
-            slug: 'nike-slim-shoes',
+            name: 'Adidas Fit Shirt',
+            slug: 'adidas-fit-sirt',
             category: 'Shirts',
             image: '/images/p2.jpg',
             price: 120,
@@ -27,9 +25,8 @@ const data = {
             rating: 7
         },
         {
-            _id: 3,
-            name: 'Nike Shirt',
-            slug: 'nike-slim-sweater',
+            name: 'Nike Slim Part',
+            slug: 'nike-slim-part',
             category: 'Shirts',
             image: '/images/p3.jpg',
             price: 120,
@@ -40,9 +37,8 @@ const data = {
             rating: 8
         },
         {
-            _id: 4,
-            name: 'Nike Shirt',
-            slug: 'nike-slim-soft',
+            name: 'Nike Pants',
+            slug: 'nike-pants-soft',
             category: 'Shirts',
             image: '/images/p4.jpg',
             price: 120,
