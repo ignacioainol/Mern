@@ -9,7 +9,7 @@ export const ShippingAddressScreen = () => {
 
     const navigate = useNavigate();
     const { state, dispatch: ctxDispatch } = useContext(Store);
-    const { userInfo, cart: { shippingAddress } } = state;
+    const { userInfo, cart: { shippingAddress, cartItems } } = state;
     const [fullName, setFullName] = useState(shippingAddress.fullName || '');
     const [address, setAddress] = useState(shippingAddress.address || '');
     const [city, setCity] = useState(shippingAddress.city || '');
@@ -20,7 +20,11 @@ export const ShippingAddressScreen = () => {
         if (!userInfo) {
             navigate('/signin?redirect=/shipping');
         }
-    }, [userInfo, navigate])
+
+        if (!cartItems) {
+            navigate('/');
+        }
+    }, [userInfo, cartItems, navigate])
 
 
     const submitHandler = async (e) => {
