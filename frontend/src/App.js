@@ -10,6 +10,7 @@ import { useContext } from 'react';
 import { Store } from './Store';
 import { CartScreen } from './screens/CartScreen';
 import { SigninScreen } from './screens/SigninScreen';
+import { ShippingAddressScreen } from './screens/ShippingAddressScreen';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
     try {
       ctxDispatch({ type: 'USER_LOGOUT' });
       localStorage.removeItem('userInfo');
+      localStorage.removeItem('shippingAddress');
     } catch (error) {
       console.log(error.message);
     }
@@ -68,6 +70,7 @@ function App() {
               <Route path="/" element={<HomeScreen />} />
               <Route path="/product/:slug" element={<ProductScreen />} />
               <Route path="/cart" element={<CartScreen />} />
+              <Route path="/shipping" element={<ShippingAddressScreen />} />
               <Route path="/signin" element={<SigninScreen />} />
             </Routes>
           </Container>
