@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from "react"
+import { useEffect, useReducer } from "react"
 // import { Link } from "react-router-dom"
 import axios from 'axios';
 import logger from 'use-reducer-logger';
@@ -27,7 +27,6 @@ export const HomeScreen = () => {
         loading: true,
         error: ''
     })
-    // const [products, setProducts] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
