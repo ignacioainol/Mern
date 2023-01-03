@@ -16,6 +16,10 @@ mongoose.set('strictQuery', false).connect(process.env.MONGODB_URI).then(() => {
 
 const app = express();
 
+app.get('/', (req, res) => {
+    res.send('hello world');
+})
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
